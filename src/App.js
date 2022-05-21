@@ -1,13 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './Pages/Common/Footer';
+import Navbar from './Pages/Common/Navbar';
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-accent text-5xl'>Bismillah</h1>
-      <button class="btn btn-primary">Button</button>
-      <button class="btn btn-secondary">Button</button>
-      <button class="btn btn-accent">Button</button>
-      <button class="btn btn-neutral">Button</button>
+    <div className='text-accent'>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/home' element={<Home/>}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
