@@ -1,0 +1,83 @@
+[
+    {
+        "_id": 1,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 2,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 3,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 4,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 5,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 6,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 7,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 8,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    },
+    {
+        "_id": 9,
+        "name":"Hammer",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea magni qui, magnam quibusdam asperiores a quisquam assumenda, ipsa nisi repudiandae accusamus, aliquid officiis iure odit? Aut similique reiciendis aliquam!",
+        "minimumOrder":"100",
+        "availableQuantity":"1000",
+        "price":"200",
+        "img":"https://i.ibb.co/wrt41gj/bolts.png"
+    }
+]
