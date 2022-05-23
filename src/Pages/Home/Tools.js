@@ -6,11 +6,11 @@ const Tools = () => {
     // const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('tools.json').then(res => res.json()))
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('tools.json')
+        fetch('http://localhost:5000/tools')
             .then(res => res.json())
             .then(data => setTools(data))
     },[])
-    console.log(tools);
+    // console.log(tools);
     return (
         <div className='flex flex-col items-center mt-12 font-bold text-primary'>
             <h1 className='text-3xl mb-12'>Here is our popular Tools</h1>
