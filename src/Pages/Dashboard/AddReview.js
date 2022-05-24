@@ -37,10 +37,10 @@ const AddReview = () => {
     }
     return (
         <div>
-            <h1 className='text-accent text-3xl font-bold text-center mb-8'>Add A Review</h1>
+            <h1 className='bg-primary text-white py-2 rounded-lg text-3xl font-bold text-center mb-8'>Add A Review</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                         {/* name field */}
-                        <div class="form-control w-full max-w-xs">
+                        <div class="form-control w-full max-w-xs md:w-96">
                             <input
                                 disabled
                                 type="text"

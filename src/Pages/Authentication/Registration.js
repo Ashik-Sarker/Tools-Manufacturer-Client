@@ -50,7 +50,7 @@ const Registration = () => {
     }
 
     return (
-        <div className='h-screen flex justify-center items-center my-24 md:my-0'>
+        <div className=' flex justify-center items-center my-24 md:my-12'>
             <div class="card w-96 bg-base-100 shadow-2xl">
                 <div class="card-body">
                     <h1 className='text-center text-xl mb-4 text-primary font-bold'>Please Register</h1>
