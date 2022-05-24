@@ -11,13 +11,16 @@ const Navbar = () => {
 
     const logOut = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
     };
     const menuItem =
     <>
         <li><Link className='text-primary font-bold' to='/tools'>Tools</Link></li>
         <li><Link className='text-primary font-bold' to='/businessSummary'>Business Summary</Link></li>
         <li><Link className='text-primary font-bold' to='/reviews'>Reviews</Link></li>
-        
+        {
+            user && <li><Link className='text-primary font-bold' to='/dashboard'>Dashboard</Link></li>
+        }
         
         {
             user
@@ -44,7 +47,7 @@ const Navbar = () => {
                 </div>
                 <Link to='/' class="btn btn-ghost md:h-16 md:w-28 border-primary rounded-full normal-case text-2xl text-primary font-bold">BTM</Link>
             </div>
-            <div class="navbar-end hidden lg:flex">
+            <div class="navbar-center 2xl:navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
                     {menuItem}
                 </ul>

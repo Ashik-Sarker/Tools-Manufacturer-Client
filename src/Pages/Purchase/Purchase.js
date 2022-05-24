@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import image1 from '../../Assets/Banner/banner1.jpg'
 import auth from '../../firebase.init';
 
@@ -43,13 +44,15 @@ const Purchase = () => {
     }
 
     const onSubmit = data => {
-        // console.log(data);
         const purchaseTools = {
             toolsId: id,
             name: user.displayName,
             email: user.email,
             phone: data.phone,
             address: data.address,
+            productName: tool.name,
+            productPrice: tool.price,
+            productImg: tool.img,
             quantity: quantityField
         }
         fetch('http://localhost:5000/purchase', {
@@ -61,10 +64,14 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
-            console.log(data);
+                if (data.acknowledged) {
+                    toast("Successfully added Item")
+                }
+                else {
+                    toast.error("already purchase this item");
+                }
+            // console.log(data);
         })
-        
-        // console.log(purchaseTools);
         reset();
     }
 

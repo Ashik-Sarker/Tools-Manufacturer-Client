@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import auth from '../../firebase.init';
 import LoadingSpinner from '../Common/LoadingSpinner';
 import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
+import useToken from '../../Hooks/useToken';
 
 const Registration = () => {
     const navigate = useNavigate();
@@ -17,9 +18,16 @@ const Registration = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     
     const [updateProfile, updating, uError] = useUpdateProfile(auth);
+    
+    // custom hook useToken
+    const [token] = useToken(user || gUser);
 
     if (gLoading || loading) {
         return <LoadingSpinner></LoadingSpinner>
+    }
+    if (token) {
+        console.log('navigate');
+        navigate('/dashboard');
     }
 
     let gErrorMessage;
@@ -36,9 +44,9 @@ const Registration = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({displayName:data.name})
         reset();
-        navigate('/');
-        console.log(data);
-        console.log('updated done');
+        // navigate('/');
+        // console.log(data);
+        // console.log('updated done');
     }
 
     return (
