@@ -46,16 +46,16 @@ const MyProfile = () => {
         reset();
     }
     return (
-        <div className='w-3/4 mx-auto mb-20 mt-16 md:mt-0 h-screen flex items-center justify-center border-2 shadow-2xl rounded-xl'>
+        <div className='w-3/4 mx-auto mb-20 mt-16 md:mt-0 h-screen flex items-center justify-center '>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className=' mx-12 md:mb-0 mb-12 text-center'>
                     <img className='w-32 mb-6 rounded-full mx-auto' src={user.photoURL} alt="" />
                     <p class="text-xl font-bold">{user.displayName}</p>
                     <p class="text-xl font-bold">{user.email}</p>
-                    <p class="text-xl font-bold border shadow-xl mt-4 mb-2 p-1 border-0">{data?.education && <>Education: {data.education}</>}</p>
-                    <p class="text-xl font-bold border shadow-xl my-2 p-1 border-0">{data?.profession && <>Profession: {data.profession}</>}</p>
-                    <p class="text-xl font-bold border shadow-xl my-2 p-1 border-0">{data?.linkedIn && <>Linked In : <a href={data.linkedIn}>{data.linkedIn}</a></>}</p>
-                    <p class="text-xl font-bold border shadow-xl my-2 p-1 border-0">{data?.address && <>Address: {data.address}</>}</p>
+                    <p class="text-xl font-bold border mt-4 mb-2 p-1 border-0">{data?.education && <>Education: {data.education}</>}</p>
+                    <p class="text-xl font-bold border my-2 p-1 border-0">{data?.profession && <>Profession: {data.profession}</>}</p>
+                    <p class="text-xl font-bold border my-2 p-1 border-0">{data?.linkedIn && <>Linked In : <a href={data.linkedIn}>{data.linkedIn}</a></>}</p>
+                    <p class="text-xl font-bold border my-2 p-1 border-0">{data?.address && <>Address: {data.address}</>}</p>
                 </div>
                 <div className=' mx-12 flex flex-col justify-center'>
                     <p className='text-white p-4 text-center text-xl mb-4 font-bold bg-primary rounded-lg w-full max-w-xs'>Update Your Profile</p>
