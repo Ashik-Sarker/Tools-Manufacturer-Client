@@ -3,7 +3,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import image1 from '../../Assets/Banner/banner1.jpg'
 import auth from '../../firebase.init';
 
 const Purchase = () => {

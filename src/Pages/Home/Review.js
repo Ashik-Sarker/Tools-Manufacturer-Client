@@ -10,7 +10,7 @@ import { Navigation, Pagination, Scrollbar } from 'swiper';
 const Review = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('customerReview.json')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -29,12 +29,12 @@ const Review = () => {
                         // when window width is >= 768px
                          768:{
                             width: 768,
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                         },
                     }
                  }
                 modules={[Navigation, Pagination, Scrollbar]}
-                spaceBetween={50}
+                spaceBetween={30}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
@@ -45,12 +45,12 @@ const Review = () => {
                 {
                     reviews.map(user => (
                         <SwiperSlide key={user._id} className="mb-12">
-                            <div class="card card-compact bg-base-100 shadow-xl bg-green-100 p-4">
-                            <figure><img className='w-24' src={user.img} alt="Shoes" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title">{user.name}</h2>
-                                <p>{user.review}</p>
-                                <p>Ratings: 5</p>
+                            <div class="card card-compact shadow-lg p-2">
+                            <figure><img className='w-20 rounded-full' src={user.img} alt="Shoes" /></figure>
+                            <div class="card-body text-center">
+                                <p className='text-lg'>{user.customerName}<small> ({user.profession})</small></p>
+                                <p>Product Name: {user.productName} <small>({user.ratings})</small></p>
+                                <small>{user.opinions}</small>
                             </div>
                             </div>
                         </SwiperSlide>
