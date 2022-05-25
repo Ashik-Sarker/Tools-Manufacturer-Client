@@ -11,7 +11,8 @@ const Order = ({ order,index,refetch }) => {
         productName,
         productPrice,
         quantity,
-        paid
+        paid,
+        transactionId
     } = order;
     console.log(_id, address);
 
@@ -38,15 +39,20 @@ const Order = ({ order,index,refetch }) => {
                 {
                     (productPrice && !paid) ?
                     <Link to={`/dashboard/payment/${_id}`}>
-                        <button class="btn bg-accent btn-xs ">pay</button>
+                        <button class="btn bg-accent btn-sm ">pay</button>
                         </Link>
                         :
-                        <button className='btn-primary' disabled>paid</button>
+                        <>
+                            <button disabled className='border text-primary border-accent px-12 font-bold rounded-lg'>PAID </button>
+                            <p className='text-orange-400'>Transaction Id: <br />{transactionId}</p>
+                        </>
                 }
                 
             </th>
             <th>
-                <button onClick={deleteOne} class="btn bg-red-700 border-0 btn-xs ">cancel</button>
+            {
+                !paid && <button onClick={deleteOne} class="btn bg-red-700 border-0 btn-sm ">cancel</button>
+            }
             </th>       
         </tr>
     );

@@ -34,14 +34,14 @@ const Payment = () => {
     return (
         <div class="grid grid-cols-1 gap-8 bg-base-100">
             <div class="card-body shadow">
-                <h3 className='text-primary font-bold'>Hello {user.displayName}</h3>
+                <h3 className='text-orange-600 font-bold'>Hello! {user.displayName}</h3>
                 <h2 class="card-title">Pay For Your Order</h2>
-                <p>Item name <span className='text-lg text-red-500'>{data.productName}</span> Quantity <span className='text-lg text-red-500'>{data.quantity}</span> and price for each product <span className='text-lg text-red-500'>${data.productPrice}</span></p>
-                <p>Total Price: <span className='text-lg text-red-500'>${subTotal}</span></p>
+                <p>Item name <span className='text-lg text-orange-500'>{data.productName}</span> Quantity <span className='text-lg text-orange-500'>{data.quantity}</span> and price for each product <span className='text-lg text-orange-500'>${data.productPrice}</span></p>
+                <p>Total Price: <span className='text-lg text-orange-500'>${subTotal}</span></p>
             </div>
             <div class="card-body shadow">
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm subTotal={subTotal} />
+                    <CheckoutForm subTotal={subTotal} data={data}/>
                 </Elements>
             </div>
         </div>

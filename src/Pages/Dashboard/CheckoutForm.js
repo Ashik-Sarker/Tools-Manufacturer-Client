@@ -1,11 +1,15 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
-const CheckoutForm = ({subTotal}) => {
+const CheckoutForm = ({ subTotal, data }) => {
+    const {_id, toolsId, name, email, phone, address, productName, productPrice, quantity } = data;
 
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
+    const [transactionId, setTransactionId] = useState('');
 
     const [clientSecret, setClientSecret] = useState('');
 
@@ -45,6 +49,52 @@ const CheckoutForm = ({subTotal}) => {
         });
 
         setCardError(error?.message || '')
+        setSuccess('');
+        setProcessing(true);
+
+        // Confirm card payment
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: name,
+                        email: email
+                        },
+                    },
+                },
+        );
+        
+        if (intentError) {
+            setCardError(intentError.message);
+            setProcessing(false);
+        }
+        else{
+            setCardError('');
+            setTransactionId(paymentIntent.id)
+            console.log(paymentIntent);
+            setSuccess('Congrats! Your payment is completed')
+
+            // set store payment on database
+            const payment = {
+                appointment: _id,
+                transactionId: paymentIntent.id
+            }
+            fetch(`http://localhost:5000/order/${_id}`, {
+                method: "PATCH",
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify(payment)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    setProcessing(false);
+                    console.log(data);
+                })
+        }
 
     }
     return (
@@ -72,6 +122,12 @@ const CheckoutForm = ({subTotal}) => {
             </form>
             {
                 cardError && <p className='text-red-700'>{cardError}</p>
+            }
+            {
+                success && <div className='text-green-700'>
+                    <p>{success}</p>
+                    <p>Your Transaction Id: <span className='text-orange-500 font-bold'>{transactionId}</span></p>
+                </div>
             }
         </>
         
