@@ -74,8 +74,8 @@ const AddProducts = () => {
                 {/*  */}
                 <div class="form-control w-full max-w-xs mb-4">
                     <input
-                        type="file"
-                        placeholder = 'Upload Images'
+                        type="text"
+                        placeholder = 'Upload Images Url'
                         class = "input input-bordered w-96 text-lg border-primary"
                         {...register("img")}
                     />

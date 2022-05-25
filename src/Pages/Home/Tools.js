@@ -13,7 +13,7 @@ const Tools = () => {
     // console.log(tools);
     return (
         <div className='flex flex-col items-center mt-12 font-bold text-primary'>
-            <h1 className='text-3xl mb-12'>Here is our popular Tools</h1>
+            <h1 style={{letterSpacing:'10px'}} className='text-4xl font-extrabold my-12'>TOOLS</h1>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-5'>
             {
                 tools.slice(0,6).map(tool => <Tool

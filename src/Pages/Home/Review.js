@@ -17,7 +17,7 @@ const Review = () => {
     
     return (
         <div className='mt-32 mb-24 p-8'>
-            <h1 className='text-4xl text-primary font-bold mb-16'>What Our Clients Says?</h1>
+            <h1 style={{letterSpacing:'5px'}} className='text-4xl text-primary font-bold mb-16'>What Our Clients Says?</h1>
             <Swiper
                  breakpoints = {
                     {
@@ -46,7 +46,7 @@ const Review = () => {
                     reviews.map(user => (
                         <SwiperSlide key={user._id} className="mb-12">
                             <div class="card card-compact shadow-lg p-2">
-                            <figure><img className='w-20 rounded-full' src={user.img} alt="Shoes" /></figure>
+                            {/* <figure><img className='w-20 rounded-full' src={user.img} alt="Shoes" /></figure> */}
                             <div class="card-body text-center">
                                 <p className='text-lg'>{user.customerName}<small> ({user.profession})</small></p>
                                 <p>Product Name: {user.productName} <small>({user.ratings})</small></p>
