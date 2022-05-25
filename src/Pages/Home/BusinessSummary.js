@@ -6,7 +6,7 @@ import feedback from '../../Assets/Icons/feedback.png'
 
 const BusinessSummary = () => {
     return (
-        <div className='my-12 pt-8'>
+        <div className='mt-4'>
             <div className='mt-16 flex flex-col items-center'>
                 <h1 style={{letterSpacing:'10px'}} className='text-2xl md:text-4xl font-bold text-primary'>MILLIONS BUSINESS TRUST US</h1>
                 <p className='md:text-xl my-2 text-accent'>TRY TO UNDERSTAND USERS EXPECTATION</p>

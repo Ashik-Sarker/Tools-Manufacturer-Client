@@ -8,7 +8,8 @@ import auth from '../../firebase.init';
 const Purchase = () => {
     const [user] = useAuthState(auth);
     const [tool, setTool] = useState({});
-    // console.log(user);
+    console.log(tool);
+    const { availableQuantity, minimumOrder } = tool;
     const { id } = useParams();
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
 
@@ -18,11 +19,11 @@ const Purchase = () => {
             .then(data => setTool(data))
     },[id])
 
-    const [quantityField, setQuantityField] = useState('100');
+    const [quantityField, setQuantityField] = useState('1000');
     const [disable, setDisable] = useState(false);
     
     const decrementQuantity = () => {
-        if ((quantityField - 1) >= 100)
+        if ((parseInt(quantityField) - 1) >= parseInt(minimumOrder))
         {
             setQuantityField(parseInt(quantityField) - 1)
         }
@@ -33,7 +34,7 @@ const Purchase = () => {
         }
     }
     const incrementQuantity = () => {
-        if (quantityField < 110){
+        if (parseInt(quantityField) < parseInt(availableQuantity)) {
             setQuantityField(parseInt(quantityField) + 1)
             setDisable(false);
         }

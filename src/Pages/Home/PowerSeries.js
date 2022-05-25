@@ -3,8 +3,8 @@ import img2 from '../../Assets/powerComponent/img2.jpg'
 
 const PowerSeries = () => {
     return (
-        <div className='mx-8'>
-            <div class="hero min-h-screen">
+        <div className=''>
+            <div class="hero min-h-3/4">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <img src={img2} class="max-w-2xl min-h-3/4 rounded-lg" alt=''/>
                     <div className='px-8'>

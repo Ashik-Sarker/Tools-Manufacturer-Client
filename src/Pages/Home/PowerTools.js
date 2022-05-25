@@ -3,9 +3,9 @@ import './PowerTools.css';
 
 const PowerTools = () => {
     return (
-        <div className='header mt-28'>
-            <p className='text-center pt-20 text-green-700 text-5xl font-bold'>POWER TOOLS</p>
-            < div className = 'flex flex-col items-center mt-12' >
+        <div className='header mt-28 flex flex-col justify-center'>
+            <p className='text-center text-green-700 text-5xl font-bold'>POWER TOOLS</p>
+            <div className = 'flex flex-col items-center mt-12' >
                 <input type="text" placeholder="Type here Name" class="input input-bordered input-md w-full max-w-xs" /><br />
                 <input type="text" placeholder="Type here Email" class="input input-bordered input-md w-full max-w-xs" /><br />
                 <input type="text" placeholder="Type here Phone Number" class="input input-bordered input-md w-full max-w-xs" /><br />

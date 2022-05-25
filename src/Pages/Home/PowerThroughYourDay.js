@@ -3,8 +3,8 @@ import img1 from '../../Assets/powerComponent/img1.jpg'
 
 const PowerThroughYourDay = () => {
     return (
-        <div className='mt-24 mx-8 mx-auto'>
-            <div class="hero min-h-screen">
+        <div className='mt-32'>
+            <div class="hero min-h-3/4">
                 <div class="hero-content flex-col lg:flex-row">
                     <img src={img1} class="max-w-2xl min-h-3/4 rounded-lg" alt=''/>
                     <div className='px-8'>
