@@ -15,9 +15,10 @@ const Navbar = () => {
     };
     const menuItem =
     <>
-        <li><Link className='text-primary font-bold' to='/tools'>Tools</Link></li>
-        <li><Link className='text-primary font-bold' to='/businessSummary'>Business Summary</Link></li>
-        <li><Link className='text-primary font-bold' to='/reviews'>Reviews</Link></li>
+        <li><Link className='text-primary font-bold' to='/blogs'>Blogs</Link></li>
+        <li><Link className='text-primary font-bold' to='/'>Tools</Link></li>
+        <li><Link className='text-primary font-bold' to='/'>Business Summary</Link></li>
+        <li><Link className='text-primary font-bold' to='/'>Reviews</Link></li>
         {
             user && <li><Link className='text-primary font-bold' to='/dashboard'>Dashboard</Link></li>
         }

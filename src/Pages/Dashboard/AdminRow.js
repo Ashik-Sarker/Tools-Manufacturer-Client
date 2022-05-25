@@ -1,33 +1,34 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const AdminRow = ({ tool, index, refetch }) => {
-    const { _id } = tool;
-    const makeDelete = () => {
-        console.log(_id);
-        fetch(`http://localhost:5000/tool/${_id}`, {
-            method: 'DELETE',
+const AdminRow = ({ user, index, refetch }) => {
+    const { email, role } = user;
+    // console.log(email);
+    const makeAdmin = () => {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
+            method: 'PUT',
             headers: {
-                authorization:`Bearer ${localStorage.getItem('accessToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())
             .then(data => {
-                if (data.deletedCount === 1) {
-                    refetch();
-                    toast.success('Successfully Delete Product')
-                }
-        })
+                toast.success('Successfully make admin');
+                console.log(data)
+                refetch();
+            })
     }
     return (
-        <tr>
+       <tr>
             <th>{index + 1}</th>
-            <td>{tool.name}</td>
-            <td>{tool.minimumOrder}</td>
-            <td>{tool.availableQuantity}</td>
-            <td>{tool.price}</td>
+            <td>{user.email}</td>
             <td>
-                <button onClick={makeDelete} className='btn btn-primary btn-sm'>Delete</button>
+                {role !== 'admin'
+                    ?
+                    <button onClick={makeAdmin} className='btn btn-primary btn-sm'>Make Admin</button>
+                    :
+                    <button className='btn btn-accent btn-sm'>Admin</button>
+                }   
             </td>
         </tr>
     );

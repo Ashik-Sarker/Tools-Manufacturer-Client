@@ -1,13 +1,10 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import auth from '../../firebase.init';
 import LoadingSpinner from '../Common/LoadingSpinner';
-import AdminRow from './AdminRow';
+import Product from './Product';
 
 const ManageProducts = () => {
-    // const [user] = useAuthState(auth);
-    const { data: tools, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/tools`, {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`http://localhost:5000/tools`, {
         method: 'GET',
         headers: {
             'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -21,7 +18,7 @@ const ManageProducts = () => {
         return <LoadingSpinner/>
     }
     
-    // console.log(users);
+    console.log(products);
 
     return (
         <div class="overflow-x-auto">
@@ -40,12 +37,12 @@ const ManageProducts = () => {
                 
                 <tbody>
                 {
-                    tools.map((tool,index) => < AdminRow
+                    products.map((tool,index) => < Product
                     key={tool._id}
                         tool={tool}
                         index={index}
                         refetch={refetch}
-                    ></AdminRow>)
+                    ></Product>)
                 }
                 
                 </tbody>

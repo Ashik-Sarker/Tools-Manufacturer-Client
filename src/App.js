@@ -21,6 +21,8 @@ import AddProducts from './Pages/Dashboard/AddProducts';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import RequireAdmin from './Pages/Authentication/RequireAdmin';
+import Blogs from './Pages/Blogs/Blogs';
+import ErrorPage from './Pages/Common/ErrorPage';
 
 function App() {
   return (
@@ -44,7 +46,9 @@ function App() {
           <Route path='manageProducts' element={<RequireAdmin><ManageProducts/></RequireAdmin>} />
         </Route>
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/registration' element={<Registration/>}></Route>
+        <Route path='/registration' element={<Registration />}></Route>
+        <Route path='/blogs' element={<Blogs/>}></Route>
+        <Route path='*' element={<ErrorPage/>}></Route>
       </Routes>
       <ToastContainer />
       <Footer></Footer>

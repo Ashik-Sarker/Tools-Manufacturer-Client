@@ -35,7 +35,7 @@ const AddProducts = () => {
         <div>
             <h1 className='bg-primary mb-6 py-2 rounded-lg text-center font-bold text-white w-96'>Add Products</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
-                {/* Education field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs">
                     <input
                         type="text"
@@ -44,7 +44,7 @@ const AddProducts = () => {
                         {...register("name")}
                     />
                 </div>
-                {/* Linked In Profile field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs">
                     <input
                         type="number"
@@ -53,7 +53,7 @@ const AddProducts = () => {
                         {...register("minimumOrder")}
                     />
                 </div>
-                {/* Profession Field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs mb-4">
                     <input
                         type="number"
@@ -62,7 +62,7 @@ const AddProducts = () => {
                         {...register("availableQuantity")}
                     />
                 </div>
-                {/* Profession Field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs mb-4">
                     <input
                         type="number"
@@ -71,16 +71,16 @@ const AddProducts = () => {
                         {...register("price")}
                     />
                 </div>
-                {/* Profession Field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs mb-4">
                     <input
-                        type="text"
+                        type="file"
                         placeholder = 'Upload Images'
                         class = "input input-bordered w-96 text-lg border-primary"
                         {...register("img")}
                     />
                 </div>
-                {/* Address Field */}
+                {/*  */}
                 <div class="form-control w-full max-w-xs">
                     <textarea
                         placeholder="Description"
