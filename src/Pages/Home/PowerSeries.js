@@ -6,7 +6,7 @@ const PowerSeries = () => {
         <div className=''>
             <div class="hero min-h-3/4">
                 <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src={img2} class="max-w-2xl min-h-3/4 rounded-lg" alt=''/>
+                    <img src={img2} class="md:max-w-2xl min-h-3/4 rounded-lg" alt=''/>
                     <div className='px-8'>
                         <h3>Multiple floor types? No problem.</h3>
                         <h1 class="text-5xl font-bold">POWERSERIES™ Extreme™</h1>

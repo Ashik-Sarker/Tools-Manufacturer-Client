@@ -32,7 +32,7 @@ const MyProjects = () => {
                         <h2 class="card-title text-3xl">Best-Tools-Manufacturers</h2>
                         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
                         <div class="card-actions justify-end">
-                        <button class="btn btn-primary"><a href="https://pro-developer-357f4.web.app/">Go Live</a></button>
+                        <button class="btn btn-primary"><a href="https://best-tools-manufacturer.web.app/">Go Live</a></button>
                         </div>
                     </div>
                 </div>
