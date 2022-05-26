@@ -4,7 +4,7 @@ import LoadingSpinner from '../Common/LoadingSpinner';
 import Product from './Product';
 
 const ManageProducts = () => {
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`http://localhost:5000/tools`, {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`https://pacific-depths-36150.herokuapp.com/tools`, {
         method: 'GET',
         headers: {
             'authorization':`Bearer ${localStorage.getItem('accessToken')}`

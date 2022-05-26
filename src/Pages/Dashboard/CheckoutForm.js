@@ -14,7 +14,7 @@ const CheckoutForm = ({ subTotal, data }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        const url = `http://localhost:5000/create-payment-intent`;
+        const url = `https://pacific-depths-36150.herokuapp.com/create-payment-intent`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -81,7 +81,7 @@ const CheckoutForm = ({ subTotal, data }) => {
                 appointment: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://pacific-depths-36150.herokuapp.com/order/${_id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': 'application/json',

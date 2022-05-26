@@ -20,7 +20,7 @@ const AddReview = () => {
             img: user.photoURL
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://pacific-depths-36150.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type':'application/json'

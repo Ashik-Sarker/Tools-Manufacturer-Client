@@ -16,7 +16,7 @@ const MyProfile = () => {
         data,
         isLoading,
         refetch
-    } = useQuery('myInfo', () => fetch(`http://localhost:5000/user/${user.email}`).then(res => res.json()))
+    } = useQuery('myInfo', () => fetch(`https://pacific-depths-36150.herokuapp.com/user/${user.email}`).then(res => res.json()))
 
     if (isLoading) {
         return <LoadingSpinner></LoadingSpinner>
@@ -31,7 +31,7 @@ const MyProfile = () => {
             address: data.address
         }
         console.log(myInfo);
-        fetch(`http://localhost:5000/myProfile/${user.email}`, {
+        fetch(`https://pacific-depths-36150.herokuapp.com/myProfile/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type':'application/json'

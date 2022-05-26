@@ -16,7 +16,7 @@ const Payment = () => {
     const [user] = useAuthState(auth)
     const { id } = useParams();
 
-    const url = `http://localhost:5000/myOrder/${id}`;
+    const url = `https://pacific-depths-36150.herokuapp.com/myOrder/${id}`;
 
     const { data, isLoading, refetch } = useQuery(['myOrder', id], () => fetch(url, {
         method: "GET",

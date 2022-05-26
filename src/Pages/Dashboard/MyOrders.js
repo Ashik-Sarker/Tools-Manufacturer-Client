@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     // console.log(user);
-    const { data: items, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/myOrders?email=${user.email}`, {
+    const { data: items, isLoading, refetch } = useQuery('orders', () => fetch(`https://pacific-depths-36150.herokuapp.com/myOrders?email=${user.email}`, {
         method: 'GET',
         headers: {
             'authorization':`Bearer ${localStorage.getItem('accessToken')}`

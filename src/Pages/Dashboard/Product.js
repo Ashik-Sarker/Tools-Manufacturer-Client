@@ -5,7 +5,7 @@ const Product = ({ tool, index, refetch }) => {
     const { _id } = tool;
     const makeDelete = () => {
         console.log(_id);
-        fetch(`http://localhost:5000/tool/${_id}`, {
+        fetch(`https://pacific-depths-36150.herokuapp.com/tool/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`

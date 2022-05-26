@@ -16,7 +16,7 @@ const AddProducts = () => {
             img: data.img
         }
         
-        fetch(`http://localhost:5000/addTool`, {
+        fetch(`https://pacific-depths-36150.herokuapp.com/addTool`, {
             method: 'POST',
             headers: {
                 'content-type':'application/json'

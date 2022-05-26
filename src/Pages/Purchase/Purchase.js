@@ -14,7 +14,7 @@ const Purchase = () => {
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
 
     useState(() => {
-        fetch(`http://localhost:5000/tool/${id}`)
+        fetch(`https://pacific-depths-36150.herokuapp.com/tool/${id}`)
             .then(res => res.json())
             .then(data => setTool(data))
     },[id])
@@ -55,7 +55,7 @@ const Purchase = () => {
             productImg: tool.img,
             quantity: quantityField
         }
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://pacific-depths-36150.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type':'application/json'

@@ -17,7 +17,7 @@ const Order = ({ order,index,refetch }) => {
     console.log(_id, address);
 
     const deleteOne = () => {
-        const url = `http://localhost:5000/myOrder/${_id}`;
+        const url = `https://pacific-depths-36150.herokuapp.com/myOrder/${_id}`;
         fetch(url, { method: 'DELETE' })
             .then(res => res.json())
             .then(data => {

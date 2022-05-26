@@ -6,7 +6,7 @@ import LoadingSpinner from '../Common/LoadingSpinner';
 
 const ManageOrders = () => {
 
-    const { data: orders, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/allOrders`, {
+    const { data: orders, isLoading, refetch } = useQuery('users', () => fetch(`https://pacific-depths-36150.herokuapp.com/allOrders`, {
         method: 'GET',
         headers: {
             'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -22,7 +22,7 @@ const ManageOrders = () => {
 
     const shiftNow = (order) => {
 
-        fetch(`http://localhost:5000/shiftNow/${order._id}`, {
+        fetch(`https://pacific-depths-36150.herokuapp.com/shiftNow/${order._id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': 'application/json',
