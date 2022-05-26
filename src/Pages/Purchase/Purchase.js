@@ -80,7 +80,7 @@ const Purchase = () => {
             {/* <h1 className='text-4xl text-primary font-bold text-center mb-20'>Purchase Id: {id}</h1> */}
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className=' mx-12 md:mb-0 mb-12'>
-                    <img src={tool.img} alt="" />
+                    <img style={{width:"50%"}} src={tool.img} alt="" />
                     <h1 class="text-5xl font-bold">{tool.name}</h1>
                     <p class="py-6">{tool.description}</p>
                     <p>Minimum Order: {tool.minimumOrder}</p>
