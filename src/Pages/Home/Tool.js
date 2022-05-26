@@ -16,7 +16,7 @@ const Tool = ({ tool }) => {
         navigate(`/purchase/${_id}`);
     }
     return (
-        <div class="card w-80 2xl:w-96 bg-base-100 shadow-xl pt-6">
+        <div class="card w-96 md:w-80 2xl:w-96 bg-base-100 shadow-xl pt-6">
             <figure><img className='w-20' src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title text-accent mx-auto text-3xl">{name}</h2>

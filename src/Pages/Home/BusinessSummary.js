@@ -8,7 +8,7 @@ const BusinessSummary = () => {
     return (
         <div className='mt-4'>
             <div className='mt-16 flex flex-col items-center'>
-                <h1 style={{letterSpacing:'10px'}} className='text-2xl md:text-4xl font-bold text-primary'>MILLIONS BUSINESS TRUST US</h1>
+                <h1 style={{letterSpacing:'10px'}} className='text-2xl md:text-4xl font-bold text-primary text-center'>MILLIONS BUSINESS TRUST US</h1>
                 <p className='md:text-xl my-2 text-accent'>TRY TO UNDERSTAND USERS EXPECTATION</p>
                 <div className='flex gap-3'>
                     <div style={{height:"2px"}} className=' w-32 bg-green-600'></div>
@@ -26,7 +26,7 @@ const BusinessSummary = () => {
                         <p className='text-sm text-primary'>Countries</p>
                     </div>
                 </div>
-                <div className='mx-auto'>
+                <div className='ml-48 md:mx-auto my-12 md:my-0'>
                     <div>
                     <img className='w-16' src={project} alt="" />
                     </div>
@@ -44,7 +44,7 @@ const BusinessSummary = () => {
                         <p className='text-sm text-primary'>Happy Clients</p>
                     </div>
                 </div>
-                <div className='mx-auto'>
+                < div className = 'mx-auto my-12 md:my-0' >
                     <div>
                     <img className='w-16' src={feedback} alt="" />
                     </div>
@@ -61,7 +61,7 @@ const BusinessSummary = () => {
                             <h2 class="card-title md:text-2xl text-primary max-w-24">Have any question about us or get a products request ?</h2>
                             <p className='md:text-xl'>Don't hesitate to contact us</p>
                         </div>
-                        <div class="card-actions justify-end items-center mt-6">
+                        <div class="card-actions justify-center md:justify-end items-center mt-6">
                             <button class="btn btn-primary px-6 mx-2">Request For Quote</button>
                             <button class="btn btn-accent px-6 mx-2">Contact Us</button>
                         </div>

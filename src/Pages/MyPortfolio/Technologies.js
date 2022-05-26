@@ -2,9 +2,9 @@ import React from 'react';
 
 const Technologies = () => {
     return (
-        <div className='technology'>
+        <div className='technology md:h-screen md:pb-0 pb-8'>
             <h1 style={{letterSpacing:"5px"}} className='text-white text-3xl text-center py-8 font-bold'>TECHNOLOGIES AS A FULL STACK DEVELOPER</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 border p-4 mx-8 shadow-2xl gap-4 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 border-0 md:border p-4 mx-8 shadow-2xl gap-4 '>
                 <div className='border p-4'>
                     <h1 className='text-white'>Front End Side</h1>
                         <li className='text-primary'>JS</li>

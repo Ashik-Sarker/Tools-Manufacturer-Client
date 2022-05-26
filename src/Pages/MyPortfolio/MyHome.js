@@ -2,8 +2,8 @@ import React from 'react';
 
 const MyHome = () => {
     return (
-        <div class=" myProfile grid">
-            <div class="text-center flex items-center justify-around">
+        <div class=" myProfile grid px-4">
+            <div class="text-center flex flex-col items-center justify-center">
                 <div>
                     <h1 class="text-5xl text-primary font-bold">Hello there</h1>
                     <h1 class=" mt-2 text-2xl text-primary font-bold">I AM ABU TAHER SARKER (ASHIK)</h1>
