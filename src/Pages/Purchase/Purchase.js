@@ -23,7 +23,8 @@ const Purchase = () => {
     const [disable, setDisable] = useState(false);
     
     const decrementQuantity = () => {
-        if ((parseInt(quantityField) - 1) >= parseInt(minimumOrder))
+        console.log(quantityField);
+        if ((parseInt(quantityField) - 1) >= 1000)
         {
             setQuantityField(parseInt(quantityField) - 1)
         }
