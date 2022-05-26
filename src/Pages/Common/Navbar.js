@@ -15,6 +15,7 @@ const Navbar = () => {
     };
     const menuItem =
     <>
+        <li><Link className='text-primary font-bold' to='/myPortfolio'>My Portfolio</Link></li>
         <li><Link className='text-primary font-bold' to='/blogs'>Blogs</Link></li>
         <li><Link className='text-primary font-bold' to='/'>Tools</Link></li>
         <li><Link className='text-primary font-bold' to='/'>Business Summary</Link></li>

@@ -24,6 +24,11 @@ import RequireAdmin from './Pages/Authentication/RequireAdmin';
 import Blogs from './Pages/Blogs/Blogs';
 import ErrorPage from './Pages/Common/ErrorPage';
 import Payment from './Pages/Dashboard/Payment';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import MyHome from './Pages/MyPortfolio/MyHome';
+import Education from './Pages/MyPortfolio/Education';
+import Technologies from './Pages/MyPortfolio/Technologies';
+import MyProjects from './Pages/MyPortfolio/MyProjects';
 
 function App() {
   return (
@@ -32,11 +37,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
-        <Route path='/purchase/:id' element={
-          <RequireAuth>
-            <Purchase/>
-          </RequireAuth>
-        }></Route>
+        <Route path='/purchase/:id' element={<RequireAuth><Purchase/></RequireAuth>}></Route>
+
         <Route path='/dashboard' element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route index element={<MyProfile/>} />
           <Route path='myOrders' element={<MyOrders/>} />
@@ -48,10 +50,19 @@ function App() {
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin/></RequireAdmin>} />
           <Route path='manageProducts' element={<RequireAdmin><ManageProducts/></RequireAdmin>} />
         </Route>
+
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/registration' element={<Registration />}></Route>
-        <Route path='/blogs' element={<Blogs/>}></Route>
-        <Route path='*' element={<ErrorPage/>}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
+        
+        <Route path='/myPortfolio' element={<MyPortfolio />}>
+          <Route index element={<MyHome/>} />
+          <Route path='education' element={<Education/>} />
+          <Route path='technologies' element={<Technologies/>} />
+          <Route path='projects' element={<MyProjects />} />
+        </Route>
+
+        <Route path='*' element={<ErrorPage />}></Route>
       </Routes>
       <ToastContainer />
       <Footer></Footer>
