@@ -34,7 +34,6 @@ const Order = ({ order,index,refetch }) => {
             <td>{productPrice}</td>
             <td>{address}</td>
             <td>{phone}</td>
-            <td>{email}</td>
             <th>
                 {
                     (productPrice && !paid) ?

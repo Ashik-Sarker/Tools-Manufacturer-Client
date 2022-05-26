@@ -42,7 +42,6 @@ const MyOrders = () => {
                             <th>Price</th>
                             <th>Location</th>
                             <th>Phone</th>
-                            <th>email</th>
                             <th>payment Status</th>
                             <th></th>
                             <th></th>
