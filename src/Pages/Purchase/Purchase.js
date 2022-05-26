@@ -19,28 +19,36 @@ const Purchase = () => {
             .then(data => setTool(data))
     },[id])
 
-    const [quantityField, setQuantityField] = useState('1000');
+    const [quantityField, setQuantityField] = useState(0);
+    // console.log(typeof (minimumOrder));
     const [disable, setDisable] = useState(false);
     
+    
     const decrementQuantity = () => {
-        console.log(quantityField);
-        if ((parseInt(quantityField) - 1) >= 1000)
+
+        if (parseInt(minimumOrder) < quantityField)
         {
-            setQuantityField(parseInt(quantityField) - 1)
+            setQuantityField(quantityField - 1);
+            setDisable(false)
         }
         else
         {
             alert('This is minimum Quantity')
+            setQuantityField(quantityField - 1);
             setDisable(true)
         }
     }
     const incrementQuantity = () => {
-        if (parseInt(quantityField) < parseInt(availableQuantity)) {
-            setQuantityField(parseInt(quantityField) + 1)
-            setDisable(false);
+
+        if (parseInt(availableQuantity) > quantityField)
+        {
+            setQuantityField(quantityField + 1);
+            setDisable(false)
         }
         else{
             alert('Our available quantity is 110')
+            setQuantityField(quantityField + 1);
+            setDisable(true)
         }
     }
 
@@ -155,7 +163,8 @@ const Purchase = () => {
                                 <span onClick={decrementQuantity} className='btn btn-primary text-xl'>-</span>
                                 <input
                                 type="text"
-                                value={quantityField}
+                                value={quantityField === 0 ? (minimumOrder && setQuantityField(parseInt(minimumOrder))) : quantityField}
+                                    
                                 class="input input-bordered" />
                                 <span onClick={incrementQuantity} className='btn btn-primary'>+</span>
                             </label>
